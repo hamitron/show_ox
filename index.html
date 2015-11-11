@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-      <script src='bower_components/angular/angular.js',></script>
-      <script src='bower_components/angular-resource/angular-resource.js',></script>
+      <script src='bower_components/angular/angular.js'></script>
+      <script src='bower_components/angular-resource/angular-resource.js'></script>
     <script src="js/app.js"></script>
     <script src="js/services.js"></script>
     <script src="js/controllers.js"></script>
@@ -29,7 +29,7 @@
             <div class="col-md-9">
             <button type="button" class="close" ng-click="showDetail = false">&times;</button>
               <ul>
-                <li ng-repeat="role in projectShow.roles">{{role.label}}</li>
+                <li ng-repeat="role in projectShow.roles"><a target="_self" ng-href="http://seven.showfax.com/roles/{{role.id}}">{{role.label}}</a></li>
               </ul>
             </div>
           </div>

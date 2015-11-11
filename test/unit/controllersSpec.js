@@ -69,7 +69,7 @@ describe('showfax controllers', function() {
 
     beforeEach(inject(function(_$httpBackend_, $rootScope, $controller) {
       $httpBackend = _$httpBackend_;
-       $httpBackend.expectGET('http://10.253.202.100:3000/api/projects').
+       $httpBackend.expectGET('http://10.253.202.100:3000/api/v1/projects').
           respond(fakeResponse);
       scope = $rootScope.$new();
       ctrl = $controller('projectListCtrl', {$scope: scope});
@@ -129,7 +129,7 @@ describe('showfax controllers', function() {
 
     beforeEach(inject(function(_$httpBackend_, $rootScope, $controller) {
       $httpBackend = _$httpBackend_;
-      $httpBackend.expectGET('http://10.253.202.100:3000/api/projects/115640.json').
+      $httpBackend.expectGET('http://10.253.202.100:3000/api/v1/projects/115640.json').
           respond(fakeProject);
       scope = $rootScope.$new();
       ctrl = $controller('projectShowCtrl', {$scope: scope});

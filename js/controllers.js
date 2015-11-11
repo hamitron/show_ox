@@ -1,8 +1,7 @@
-var showfaxControllers = angular.module('showfaxControllers',[]).run(function($http) {
-   $http.defaults.headers.common.Authorization = "Token token=nonfat"
-});
+var showfaxControllers = angular.module('showfaxControllers',[]);
 
-showfaxControllers.controller('projectListCtrl', function($scope, projectList, $filter) {
+showfaxControllers.controller('projectListCtrl', function($scope, projectList, $filter, $http) {
+  $http.defaults.headers.common.Authorization = "Token token=nonfat";
 	// intial hide of project show details
   $scope.showDetail = false;
   $scope.perPage = 20;

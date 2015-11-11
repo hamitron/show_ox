@@ -10,9 +10,7 @@ showfaxControllers.controller('projectListCtrl', function($scope, projectList, $
 
   // queries entire project list. set vars.
   projectList
-    .get()
-    .$promise
-    .then(function(data){
+    .get(function(data){
       $scope.projects = data.projects;
       $scope.locations = data.locations;
       $scope.project_types = data.project_types;

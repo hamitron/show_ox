@@ -1,4 +1,6 @@
-var showfaxControllers = angular.module('showfaxControllers',[])
+var showfaxControllers = angular.module('showfaxControllers',[]).run(function($http) {
+   $http.defaults.headers.common.Authorization = "Token token=nonfat"
+});
 
 showfaxControllers.controller('projectListCtrl', function($scope, projectList, $filter) {
 	// intial hide of project show details
@@ -7,10 +9,13 @@ showfaxControllers.controller('projectListCtrl', function($scope, projectList, $
   $scope.beginVar = 0;
   $scope.projects = [];
   $scope.filteredProjects = [];
+  
 
   // queries entire project list. set vars.
   projectList
-    .get(function(data){
+    .get()
+    .$promise
+    .then(function(data){
       $scope.projects = data.projects;
       $scope.locations = data.locations;
       $scope.project_types = data.project_types;

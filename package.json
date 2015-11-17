@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "showfax onepager with angular",
   "main": "js/app.js",
-  "repository":"gitlab.nonfatmedia.com:hkarl/angular-showfax.git",
+  "repository":"",
   "devDependencies": {
     "karma": "^0.12.16",
     "karma-chrome-launcher": "^0.1.4",
